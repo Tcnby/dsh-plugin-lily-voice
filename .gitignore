@@ -1,0 +1,21 @@
+node_modules/
+_profile_backup/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 本机运行数据（属于用户，不入库）
+heard.jsonl
+heard_ignored.jsonl
+learned.jsonl
+confirmed.jsonl
+rec_state.json
+voice_cfg.json
+fix_table.json
+fix_phrases.json
+vocab.txt
+
+# 备份文件
+*.bak-*
+*.bak

@@ -1,0 +1,60 @@
+﻿{
+  "name": "dsh-plugin-lily-voice",
+  "version": "0.2.0",
+  "description": "DSH 语音面板：麦克风常驻监听、转写实时上屏、本地同音纠错词表、发音人确认、发送框旁状态灯与语音播报",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "voice",
+    "speech-to-text",
+    "whisper",
+    "tts",
+    "chinese"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tcnby/dsh-plugin-lily-voice.git"
+  },
+  "homepage": "https://github.com/Tcnby/dsh-plugin-lily-voice#readme",
+  "bugs": {
+    "url": "https://github.com/Tcnby/dsh-plugin-lily-voice/issues"
+  },
+  "author": "莉莉 (Lily)",
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.3"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.3",
+    "react": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
